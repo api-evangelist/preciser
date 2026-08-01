@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/preciser-api-openapi.yml
+note: >-
+  Derived from the two advertised operations. Entity fields are not documented
+  by the provider; only the identifiers exposed in the API paths are modeled.
+entities:
+  - name: Game
+    id: gameId
+    description: A single analyzed basketball/baseball game.
+    exposed_by: getChartData
+  - name: Season
+    id: seasonId
+    description: A season aggregating opponent-team data.
+    exposed_by: getOppTeamData
+relationships:
+  - from: Game
+    to: Season
+    type: belongs_to
+    via: seasonId
+    confidence: inferred
+    note: Games are typically grouped under a season; not explicitly documented.

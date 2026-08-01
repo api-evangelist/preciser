@@ -1,0 +1,16 @@
+{
+  "provider": "preciser",
+  "sources": [
+    "preciser-chart-data-api-openapi.yml",
+    "preciser-opp-team-data-api-openapi.yml"
+  ],
+  "outputs": [
+    "preciser-chart-data-api-openapi.yml",
+    "preciser-opp-team-data-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

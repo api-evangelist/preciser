@@ -1,7 +1,29 @@
 aid: preciser
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/preciser.png
 name: Preciser
-description: Preciser is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Preciser is an AI and computer-vision sports analytics platform that
+  automatically converts basketball and baseball game footage into statistics,
+  trends, and player insights, removing the traditionally manual work of video
+  tagging. Its three-part product covers Capture (InstaStats converts video to
+  stats), Analyze (a Data Management System that generates statistics and
+  insights), and Monetize (APIs that expose live stats feeds and widgets). The
+  Preciser API advertises game chart-data and opponent-team-data endpoints under
+  https://plg-api.preciser.io/v1. The company reports roughly 85% average
+  accuracy, a two-hour average turnaround per game, and 10x faster analysis than
+  manual tagging. Preciser is backed by 500 Global and the NVIDIA Inception
+  Program.
 url: https://raw.githubusercontent.com/api-evangelist/preciser/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +33,44 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1
 tags:
 - Company
-apis: []
+- Sports
+- Sports Analytics
+- Computer Vision
+- Artificial Intelligence
+- Video Analysis
+- Statistics
+- Basketball
+- Baseball
+- Data
+apis:
+- aid: preciser:preciser-chart-data-api
+  name: Preciser Chart Data API
+  description: The Chart Data API from Preciser — 1 operation(s) for chart data.
+  humanURL: https://preciser.io/apis
+  baseURL: https://plg-api.preciser.io/v1
+  tags:
+  - Chart Data
+  properties:
+  - type: OpenAPI
+    url: openapi/preciser-chart-data-api-openapi.yml
+- aid: preciser:preciser-opp-team-data-api
+  name: Preciser Opp Team Data API
+  description: The Opp Team Data API from Preciser — 1 operation(s) for opp team data.
+  humanURL: https://preciser.io/apis
+  baseURL: https://plg-api.preciser.io/v1
+  tags:
+  - Opp Team Data
+  properties:
+  - type: OpenAPI
+    url: openapi/preciser-opp-team-data-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +79,37 @@ maintainers:
 common:
 - type: Website
   url: https://preciser.io
+- type: APIReference
+  url: https://api.preciser.io/
+- type: Blog
+  url: https://preciser.io/blog
+- type: SignUp
+  url: https://app.preciser.io
+- type: Login
+  url: https://app.preciser.io
+- type: Support
+  url: https://preciser.io/contact
+- type: TermsOfService
+  url: https://preciser.io/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://preciser.io/privacy-policy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/preciserai/
+- type: Twitter
+  url: https://twitter.com/preciserai
+- type: Instagram
+  url: https://www.instagram.com/precisersports/
+- type: OpenAPI
+  url: openapi/preciser-api-openapi.yml
+- type: Overlay
+  url: overlays/preciser-api-overlay.yaml
+- type: MCPServer
+  url: mcp/preciser-mcp.yml
+- type: LLMsTxt
+  url: llms/preciser-llms.txt
+- type: Conformance
+  url: conformance/preciser-conformance.yml
+- type: DataModel
+  url: data-model/preciser-data-model.yml
+- type: DomainSecurity
+  url: security/preciser-domain-security.yml

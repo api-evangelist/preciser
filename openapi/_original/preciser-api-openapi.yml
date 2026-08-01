@@ -1,0 +1,63 @@
+# generated: '2026-07-20'
+# method: searched
+# source: https://api.preciser.io/ (live API welcome/index document)
+# note: Captured verbatim from Preciser's own public API index. Only the two
+#   operations the index advertises are modeled. Response schemas are not
+#   documented by the provider and are intentionally left unspecified (the
+#   endpoints require credentials and were not fabricated).
+openapi: 3.1.0
+info:
+  title: Preciser API
+  version: v1
+  description: >-
+    The Preciser API delivers basketball and baseball game analytics generated
+    by Preciser's AI/computer-vision pipeline as live stats feeds and widgets.
+    The public API index at https://api.preciser.io advertises two data
+    endpoints served from https://plg-api.preciser.io/v1. Access requires a
+    Preciser account; contact Preciser for API credentials and onboarding.
+  contact:
+    name: Preciser
+    url: https://preciser.io/apis
+  x-api-index: https://api.preciser.io/
+servers:
+  - url: https://plg-api.preciser.io/v1
+    description: Production
+paths:
+  /chart-data/id/{gameId}:
+    get:
+      operationId: getChartData
+      summary: Get chart data for a game
+      description: >-
+        Returns the chart/statistics data feed for a single game, identified by
+        its Preciser game identifier. Advertised by the Preciser API index.
+      parameters:
+        - name: gameId
+          in: path
+          required: true
+          description: Preciser identifier for the game.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Chart data for the requested game.
+          content:
+            application/json: {}
+  /opp-team-data/id/{seasonId}:
+    get:
+      operationId: getOppTeamData
+      summary: Get opponent team data for a season
+      description: >-
+        Returns opponent-team data for a single season, identified by its
+        Preciser season identifier. Advertised by the Preciser API index.
+      parameters:
+        - name: seasonId
+          in: path
+          required: true
+          description: Preciser identifier for the season.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Opponent team data for the requested season.
+          content:
+            application/json: {}

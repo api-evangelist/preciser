@@ -1,0 +1,18 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: openapi/preciser-api-openapi.yml
+note: >-
+  Preciser publishes no official MCP server. This is a CANDIDATE tool list
+  derived one-to-one from the two operations advertised by the Preciser API
+  index, to illustrate an agent-native surface. Not an official Preciser server.
+server:
+  name: preciser
+  transport: http
+tools:
+  - name: get_chart_data
+    description: Get chart/statistics data for a Preciser game by game id.
+    source_operation: openapi/preciser-api-openapi.yml#getChartData
+  - name: get_opp_team_data
+    description: Get opponent-team data for a Preciser season by season id.
+    source_operation: openapi/preciser-api-openapi.yml#getOppTeamData

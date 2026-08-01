@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: generated
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Preciser API
+  version: 1.0.0
+extends: openapi/preciser-api-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-source: https://api.preciser.io/
+      x-apievangelist-note: >-
+        Spec reconstructed from Preciser's public API index; response schemas
+        pending provider publication or an authenticated capture.
+  - target: $.info
+    update:
+      x-industry: sports-analytics
+      x-sports: [basketball, baseball]
+  - target: $.paths['/chart-data/id/{gameId}'].get
+    update:
+      x-apievangelist-tag: analytics
+  - target: $.paths['/opp-team-data/id/{seasonId}'].get
+    update:
+      x-apievangelist-tag: analytics
