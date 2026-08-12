@@ -100,7 +100,7 @@ common:
 - type: Instagram
   url: https://www.instagram.com/precisersports/
 - type: OpenAPI
-  url: openapi/preciser-api-openapi.yml
+  url: openapi/_original/preciser-api-openapi.yml
 - type: Overlay
   url: overlays/preciser-api-overlay.yaml
 - type: MCPServer
