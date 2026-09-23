@@ -1,8 +1,7 @@
 {
   "provider": "preciser",
   "sources": [
-    "preciser-chart-data-api-openapi.yml",
-    "preciser-opp-team-data-api-openapi.yml"
+    "_original/preciser-api-openapi.yml"
   ],
   "outputs": [
     "preciser-chart-data-api-openapi.yml",
@@ -11,6 +10,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "preciser-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "preciser-api-openapi.yml: tagged paths GET /chart-data/id/{gameId} -> Chart Data",
+    "preciser-api-openapi.yml: tagged paths GET /opp-team-data/id/{seasonId} -> Opp Team Data",
+    "preciser-api-openapi.yml: declared missing tag: Chart Data",
+    "preciser-api-openapi.yml: declared missing tag: Opp Team Data",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "preciser-chart-data-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "preciser-opp-team-data-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
