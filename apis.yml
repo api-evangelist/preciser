@@ -55,7 +55,7 @@ tags:
 - Company
 - Sports
 - Sports Analytics
-- Computer-Vision
+- Computer Vision
 - Artificial Intelligence
 - Video Analysis
 - Statistics
@@ -73,6 +73,7 @@ tags_raw:
 - Basketball
 - Baseball
 - Data
+- Computer-Vision
 apis:
 - aid: preciser:preciser-chart-data-api
   name: Preciser Chart Data API
